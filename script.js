@@ -34,8 +34,15 @@ function draw() {
 
     if (balX >= 1280) {
         speedX = speedX * -1
+
+            if (balX >= 0) {
+        speedX = speedX * -1
     } 
+
     if (balY >= 720) {
         speedY = speedY * -1
     }
 }
+    if (balY >= 0) {
+        speedY = speedY * -1
+    }
