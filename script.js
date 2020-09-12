@@ -1,4 +1,8 @@
-var balX = 50;
+var balX1 = 50;
+var balX2 = 100;
+var balX3 = 150;
+var balX4 = 200;
+var balX5 = 250;
 var balY = 50;
 var speedX = 5;
 var speedY = 3;
@@ -26,14 +30,24 @@ function draw() {
   // stel vulkleur in
   fill(255, 100, 255);
 
-
-    balX = balX + speedX;
+  // teken een cirkel
+  ellipse(balX1,balY,80,80);
+  ellipse(balX2,balY,80,80);
+  ellipse(balX3,balY,80,80);
+  ellipse(balX4,balY,80,80);
+  ellipse(balX5,balY,80,80);
+  
+    balX1 = balX1 + speedX;
+    balX2 = balX1 + speedX;
+    balX3 = balX1 + speedX;
+    balX4 = balX1 + speedX;
+    balX5 = balX1 + speedX;
     balY = balY + speedY;
 
-    if (balX >= 1280 && balX >= 0) {
+    if (balX1 >= 1280) {
         speedX = speedX * -1
 
-    if (balY >= 720 && balY >= 0) {
+    if (balY >= 720) {
         speedY = speedY * -1
     }
     }
