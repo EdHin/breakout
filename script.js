@@ -26,13 +26,7 @@ function draw() {
   // stel vulkleur in
   fill(255, 100, 255);
 
-  // teken een cirkel
-  ellipse(balX,balY,80,80);
-  ellipse(balX,balY,100,100);
-  ellipse(balX,balY,120,120);
-  ellipse(balX,balY,140,140);
-  ellipse(balX,balY,160,160);
-  
+
     balX = balX + speedX;
     balY = balY + speedY;
 
