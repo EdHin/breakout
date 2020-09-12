@@ -28,21 +28,19 @@ function draw() {
 
   // teken een cirkel
   ellipse(balX,balY,80,80);
+  ellipse(balX,balY,100,100);
+  ellipse(balX,balY,120,120);
+  ellipse(balX,balY,140,140);
+  ellipse(balX,balY,160,160);
   
     balX = balX + speedX;
     balY = balY + speedY;
 
-    if (balX >= 1280) {
+    if (balX >= 1280 && balX >= 0) {
         speedX = speedX * -1
 
-            if (balX >= 0) {
-        speedX = speedX * -1
-    } 
-
-    if (balY >= 720) {
+    if (balY >= 720 && balY >= 0) {
         speedY = speedY * -1
+    }
     }
 }
-    if (balY >= 0) {
-        speedY = speedY * -1
-    }
