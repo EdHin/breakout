@@ -9,8 +9,8 @@ class Bal {
 }
 
 
-var bal = new Bal(50, 50, 3, 6);
-
+var ballenX = [30,150,5,5];
+var ballenY = [30,150,5,5];
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
