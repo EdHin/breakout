@@ -1,5 +1,5 @@
-class Balk {
-    constructor (x,y) {
+class Blok {
+    constructor (x,y,w,h) {
         this.x = x;
         this.y = y;
         this.w = w;
@@ -13,7 +13,8 @@ class Balk {
     }
 }
 
-var balk = new Balk (50,50,50,50);
+var blok1 = new Blok (50,50,50,50);
+var blok2 = new Blok (110,50,50,50);
 
 
 class Bal {
@@ -73,5 +74,7 @@ function draw() {
   bal.show();
   bal.update();
 
-  balk.show();
+  // teken een balk
+  blok1.show();
+  blok2.show();
 }
