@@ -1,3 +1,21 @@
+class Balk {
+    constructor (x,y) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+
+    show() {
+        noStroke();
+        fill (255,255,0);
+        rect(this.x, this.y, this.w, this.h);
+    }
+}
+
+var balk = new Balk (50,50,50,50);
+
+
 class Bal {
    constructor(x, y, speedX, speedY) {
       this.x = x;
@@ -6,11 +24,29 @@ class Bal {
       this.speedY = speedY;
       this.diameter = 80;
    }
+
+   show() {
+       noStroke();
+       fill (255,255,0);
+       ellipse(this.x, this.y, this.diameter, this.diameter);
+   }
+
+   // update positie
+   update() {
+        this.x = this.x + this.speedX;
+        this.y = this.y + this.speedY;
+
+        if (this.x <= 0 || this.x >= 1280 ) {
+            this.speedX = this.speedX * -1
+        }
+
+        if (this.y <= 0 || this.y >= 720) {
+            this.speedY = this.speedY * -1;
+        }
+   }
 }
 
-
-var ballenX = [30,150,5,5];
-var ballenY = [30,150,5,5];
+var bal = new Bal(100, 100, 5, 2);
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -19,9 +55,7 @@ var ballenY = [30,150,5,5];
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
-
 }
- 
 
 /**
  * draw
@@ -29,24 +63,15 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
-  // Kleur de achtergrond blauw, zodat je het kunt zien
+  // Kleur de achtergrond blauw, zodat je het kunt zien      
   background('blue');
   
-  // stel vulkleur in
+  // stel vulkleur inß
   fill(255, 100, 255);
 
    // teken een cirkel
-   ellipse(bal.x, bal.y, bal.diameter, bal.diameter);
+  bal.show();
+  bal.update();
 
-   // update positie
-   bal.x = bal.x + bal.speedX;
-   bal.y = bal.y + bal.speedY;
-
-   if (bal.x <= 0 || bal.x >= 1280 ) {
-      bal.speedX = bal.speedX * -1
-   }
-
-   if (bal.y <= 0 || bal.y >= 720) {
-      bal.speedY = bal.speedY * -1;
-   }
+  balk.show();
 }
