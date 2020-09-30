@@ -1,7 +1,12 @@
-class Blok {
+class SpelElement {
+    constructor (x,y) {
+    this.x = x;
+    this.y = y;
+    }
+}
+class Blok extends SpelElement{
     constructor (x,y,w,h) {
-        this.x = x;
-        this.y = y;
+        super(x,y);
         this.w = w;
         this.h = h;
     }
@@ -17,10 +22,9 @@ var blok1 = new Blok (50,50,50,50);
 var blok2 = new Blok (110,50,50,50);
 
 
-class Bal {
+class Bal extends SpelElement{
    constructor(x, y, speedX, speedY) {
-      this.x = x;
-      this.y = y;
+      super(x,y);
       this.speedX = speedX;
       this.speedY = speedY;
       this.diameter = 80;
